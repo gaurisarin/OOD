@@ -1,0 +1,32 @@
+canvas 1000 500
+rectangle name sky min-x 0 min-y 0 width 1000 height 500 color 0.4 0.4 0.9 from 0 to 200
+oval name sun center-x 800 center-y 160 x-radius 50 y-radius 50 color 0.7 0.7 0.2 from 0 to 150
+rectangle name road min-x 0 min-y 240 width 1000 height 10 color 0.2 0.2 0.2 from 0 to 200
+rectangle name ground min-x 0 min-y 250 width 1000 height 260 color 0.2 0.8 0.2 from 0 to 200
+oval name light center-x 140 center-y 220 x-radius 120 y-radius 8 color 0.9 0.9 0.4 from 80 to 200
+rectangle name car min-x 20 min-y 210 width 80 height 20 color 0.8 0 0 from 0 to 200
+rectangle name roof min-x 50 min-y 200 width 30 height 10 color 0.8 0 0 from 0 to 200
+oval name wheel1 center-x 32 center-y 230 x-radius 10 y-radius 10 color 0 0 0 from 0 to 200
+oval name wheel2 center-x 88 center-y 230 x-radius 10 y-radius 10 color 0 0 0 from 0 to 200
+oval name star1 center-x 20 center-y 100 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 95 to 200
+oval name star2 center-x 90 center-y 60 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 103 to 200
+oval name star3 center-x 200 center-y 30 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 97 to 200
+oval name star4 center-x 250 center-y 130 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 93 to 200
+oval name star5 center-x 310 center-y 80 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 105 to 200
+oval name star6 center-x 430 center-y 65 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 102 to 200
+oval name star7 center-x 580 center-y 110 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 108 to 200
+oval name star8 center-x 670 center-y 20 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 100 to 200
+oval name star9 center-x 800 center-y 50 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 95 to 200
+oval name star10 center-x 880 center-y 90 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 99 to 200
+oval name star11 center-x 950 center-y 60 x-radius 5 y-radius 5 color 0.8 0.8 0.3 from 101 to 200
+change-color name road colorto 0.2 0.2 0.2 0.05 0.05 0.05 from 0 to 170
+change-color name sky colorto 0.4 0.4 0.9 0 0 0.2 from 0 to 170
+change-color name ground colorto 0.2 0.8 0.2 0 0.2 0 from 0 to 170
+change-color name car colorto 0.8 0 0 0.2 0 0 from 0 to 170
+change-color name roof colorto 0.8 0 0 0.2 0 0 from 0 to 170
+move name sun moveto 800 160 840 300 from 10 to 150
+move name car moveto 20 210 920 210 from 0 to 200
+move name roof moveto 50 200 950 200 from 0 to 200
+move name light moveto 140 220 1040 220 from 0 to 200
+move name wheel1 moveto 32 230 932 230 from 0 to 200
+move name wheel2 moveto 88 230 988 230 from 0 to 200

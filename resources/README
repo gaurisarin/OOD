@@ -1,0 +1,86 @@
+OVERVIEW
+
+    The animation model is constructed by an ordered map of shapes. These shapes
+    can each individually have transforms on them, as an unordered map. If
+    any gaps are made when adding or removing transforms from a shape,
+    a "NoTransform" is added in its place, so there is never any gaps.
+
+    The "big idea" of this animator is that its transforms do not store
+    absolute beginning and end values. This ensures that, no matter how
+    the user defines an animation, it will always result in a smooth transition
+    from the previous state of the shape. This is because it operates by rates,
+    and can changes the shape relative to its existing state.
+
+    As stored in shapes, transforms have an Event key, which exists to differentiate
+    the different kinds of transform (using the EventType enum), and to record
+    when the transform is active on the shape.
+
+    For output, the shapes have their own methods that return their plaintext
+    and SVG-compliant text representations, including all their transforms.
+    This must be done in the shape, as the nature of the transform means that
+    it has no knowledge of its absolute changes, so it must rely on the shape,
+    which stores a permanent copy of its initial values for reference, to
+    translate its relative movements into absolute reports. For the visual view,
+    the shapes also draw themselves using the 2DGraphics instance provided by
+    the view.
+
+
+CHANGES FROM ASSIGNMENT FOUR
+
+    Added hasEnded() method to determine if the end of an animation has been reached
+    used to re-rendering the animation when no changes will be made.
+    For this, added lastTick() method to shapes to return the end of their list of
+    transforms.
+
+    In order to make toString work without having to make a copy of the shapes,
+    shapes hold the state they existed in when the shape was constructed.
+    This is used as a starting point to construct the absolute positions of the shape,
+    since transforms do not contain this data themselves.
+
+    For the new views, added methods to return more generalized string outputs, such
+    as one compliant with SVG specification, and included support for the tempo of
+    the animation when returning a model represented as a string.
+
+    Changed the ellipse to use simple width and height values to make it easier
+    to draw. Moved the width and height into the abstract class, since now
+    all shapes will have these values. Also added a visibility toggle and
+    transform, to make shapes be able to appear after the start of the animation
+    and disappear before the end. Added Scale transform to deal with changing
+    the size of the shapes. Added the drawWith() method to shapes to let them
+    draw themselves visually.
+
+    Added width and height values for the model, to allow for a viewport/canvas size,
+    and added methods to retrieve these bounds.
+
+    Shapes now report their coordinates in decimal double. This allows for more
+    flexibility and precision for the view formats that allow it. The ones that don't
+    can now round them instead.
+
+    NOTE: The transforms that were not required were not implemented more than they
+    already were in assignment 4, to save time. When needed, they can be added fairly easily.
+
+    In order to preserve the order of the shapes, changed from a HashMap to a LinkedHashMap.
+    This was done so that the layering of shapes stays consistent to the order inserted to
+    the model.
+
+CHANGES FROM ASSIGNMENT 5
+
+    For assignment 5, changes to the controller, model, and views were made.
+
+    The model's methods were broken up into two interfaces, a read-only one and a mutable one.
+    The views now takes a read-only model. The model's ability to return itself as a standard
+    text string was removed and that functionality was given to the text animator view.
+
+    The controller was also similarly separated into two interfaces, one to deal with the simple,
+    non-interactive views from assignment 5 and one to handle the interactivity required for
+    assignment 6.
+
+    The views interface was slightly changed, with a few methods changed to default ones,
+    since they would only be needed for the interactive view. A second interface
+    was not used to make the main method simpler.
+
+    A new composite view class was made out of the visual view, which extends it with the
+    support of user interactivity.
+
+    To handle user interaction, a listener was added to decode the different button presses,
+    which then sends the appropriate response to the controller.

@@ -1,0 +1,29 @@
+canvas 500 500
+rectangle name back min-x 0 min-y 0 width 500 height 500 color 0 0 0.8 from 0 to 5000
+oval name is1 center-x 50 center-y 50 x-radius 75 y-radius 50 color 0 0.8 0 from 0 to 5000
+oval name is2 center-x 350 center-y 50 x-radius 75 y-radius 50 color 0 0.8 0 from 0 to 5000
+rectangle name back min-x 0 min-y 0 width 500 height 500 color 0 0 0.8 from 0 to 5000
+oval name boat center-x 75 center-y 95 x-radius 75 y-radius 25 color 0.57254905 0.40784314 0.07450981 from 0 to 5000
+oval name grain center-x 105 center-y 75 x-radius 25 y-radius 25 color 0.99607843 0.99607843 0.2 from 0 to 5000
+oval name chicken center-x 85 center-y 75 x-radius 25 y-radius 25 color 0.92156863 0.92156863 0.92156863 from 0 to 5000
+oval name fox center-x 65 center-y 75 x-radius 25 y-radius 25 color 0.99607843 0.5019608 0.0 from 0 to 5000
+oval name farmer center-x 45 center-y 75 x-radius 25 y-radius 25 color 0.99607843 0.8627451 0.78431374 from 0 to 5000
+move name farmer moveto 20 50 320 50 from 0 to 20
+move name chicken moveto 60 50 360 50 from 0 to 20
+move name boat moveto 50 70 350 70 from 0 to 20
+move name farmer moveto 320 50 20 50 from 20 to 40
+move name boat moveto 350 70 50 70 from 20 to 40
+move name farmer moveto 20 50 320 50 from 40 to 60
+move name fox moveto 40 50 340 50 from 40 to 60
+move name boat moveto 50 70 350 70 from 40 to 60
+move name farmer moveto 320 50 20 50 from 60 to 80
+move name chicken moveto 360 50 60 50 from 60 to 80
+move name boat moveto 350 70 50 70 from 60 to 80
+move name farmer moveto 20 50 320 50 from 80 to 100
+move name grain moveto 80 50 380 50 from 80 to 100
+move name boat moveto 50 70 350 70 from 80 to 100
+move name farmer moveto 320 50 20 50 from 100 to 120
+move name boat moveto 350 70 50 70 from 100 to 120
+move name farmer moveto 20 50 320 50 from 120 to 140
+move name chicken moveto 60 50 360 50 from 120 to 140
+move name boat moveto 50 70 350 70 from 120 to 140
